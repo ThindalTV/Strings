@@ -27,7 +27,7 @@ Usage is the same as IndexOf, but instead it returns a string up until the speci
 
 ## Contributing
 
-Contributions to Thindal.Strings are welcome! If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/your-username/Thindal.Strings). Pull requests are also appreciated.
+Contributions to Thindal.Strings are welcome! If you find a bug or have a feature request, please open an issue on the [GitHub repository]([https://github.com/ThindalTV/Strings]). Pull requests are also appreciated.
 
 ## License
 
