@@ -5,6 +5,28 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>System</RootNamespace>
+    <Title>Thindal String Extensions</Title>
+    <Authors>Thindal</Authors>
+    <Description>A series of string extenion methods to make substrings easier.</Description>
+    <PackageProjectUrl>https://github.com/ThindalTV/Strings</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/ThindalTV/Strings</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Extensions, String, Substring, Helper, Until, SubstringOrShorter</PackageTags>
+    <PackageOutputPath>..\..\pkg\</PackageOutputPath>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
