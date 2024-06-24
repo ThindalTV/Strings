@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thindal.Strings", "src\Thindal.Strings\Thindal.Strings.csproj", "{B27231D4-9021-4B66-9BEB-D01AEE86D038}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Thindal.Strings.Tests", "src\Thindal.Strings.Tests\Thindal.Strings.Tests.csproj", "{C4DE8CD6-DF23-41EE-AD47-D0963EF7DF0A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{21308B13-BA26-49AA-8EA2-E45571954E75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{DF61ECF4-374D-43DC-AF85-153F10A8A68F}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ContinuousDeployment.yaml = .github\workflows\ContinuousDeployment.yaml
+		.github\workflows\ContinuousIntegration.yaml = .github\workflows\ContinuousIntegration.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{14CA397D-2B7A-485B-8A91-CD849290FA6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B27231D4-9021-4B66-9BEB-D01AEE86D038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27231D4-9021-4B66-9BEB-D01AEE86D038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27231D4-9021-4B66-9BEB-D01AEE86D038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27231D4-9021-4B66-9BEB-D01AEE86D038}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DE8CD6-DF23-41EE-AD47-D0963EF7DF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DE8CD6-DF23-41EE-AD47-D0963EF7DF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DE8CD6-DF23-41EE-AD47-D0963EF7DF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DE8CD6-DF23-41EE-AD47-D0963EF7DF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B27231D4-9021-4B66-9BEB-D01AEE86D038} = {14CA397D-2B7A-485B-8A91-CD849290FA6C}
+		{C4DE8CD6-DF23-41EE-AD47-D0963EF7DF0A} = {14CA397D-2B7A-485B-8A91-CD849290FA6C}
+		{DF61ECF4-374D-43DC-AF85-153F10A8A68F} = {21308B13-BA26-49AA-8EA2-E45571954E75}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7E1DC74-B7AC-4FA0-9577-6523F54AB7E9}
+	EndGlobalSection
+EndGlobal
