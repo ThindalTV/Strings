@@ -15,9 +15,6 @@ public static class UntilExtensions
         ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
         ArgumentException.ThrowIfNullOrEmpty(until, nameof(until));
 
-        if (string.IsNullOrEmpty(until))
-            return str;
-
         var index = str.IndexOf(until);
         if (index == -1)
             return str;
@@ -37,10 +34,8 @@ public static class UntilExtensions
         // TODO: Needs tests
 
         ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentException.ThrowIfNullOrEmpty(until, nameof(until));
         ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
-
-        if (string.IsNullOrEmpty(until))
-            return str;
 
         var index = str.IndexOf(until, startIndex);
         if (index == -1)
@@ -139,8 +134,7 @@ public static class UntilExtensions
     public static string Until(this string str, string until, StringComparison comparisonType)
     {
         ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
-        if (string.IsNullOrEmpty(until))
-            return str;
+        ArgumentException.ThrowIfNullOrEmpty(until, nameof(until));
 
         var index = str.IndexOf(until, comparisonType);
         if (index == -1)
@@ -161,11 +155,9 @@ public static class UntilExtensions
     public static string Until(this string str, string until, int startIndex, int count, StringComparison comparisonType)
     {
         ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentException.ThrowIfNullOrEmpty(until, nameof(until));
         ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
         ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(count, 0, nameof(count));
-
-        if (string.IsNullOrEmpty(until))
-            return str;
 
         var index = str.IndexOf(until, startIndex, count, comparisonType);
         if (index == -1)
@@ -185,11 +177,9 @@ public static class UntilExtensions
     public static string Until(this string str, string until, int startIndex, int count)
     {
         ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentException.ThrowIfNullOrEmpty(until, nameof(until));
         ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
         ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(count, 0, nameof(count));
-
-        if (string.IsNullOrEmpty(until))
-            return str;
 
         var index = str.IndexOf(until, startIndex, count);
         if (index == -1)
@@ -209,10 +199,8 @@ public static class UntilExtensions
     public static string Until(this string str, string until, int startIndex, StringComparison comparisonType)
     {
         ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentException.ThrowIfNullOrEmpty(until, nameof(until));
         ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
-
-        if (string.IsNullOrEmpty(until))
-            return str;
 
         var index = str.IndexOf(until, startIndex, comparisonType);
         if (index == -1)

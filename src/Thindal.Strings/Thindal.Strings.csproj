@@ -18,7 +18,7 @@ Contains methods such as SubstringOrShorter and Until, making simple code shorte
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <IncludeSymbols>False</IncludeSymbols>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>$(VersionPrefix) 1.0.1</Version>
+    <Version>$(VersionPrefix) 1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
