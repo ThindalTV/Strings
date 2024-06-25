@@ -8,17 +8,14 @@ namespace Thindal.Strings.Tests.ExtensionTests;
 public class UntilTests
 {
     [Fact]
-    public void Until_WhenStringIsEmpty_ShouldReturnEmptyString()
+    public async Task Until_WhenStringIsEmpty_ShouldThrowOutOfRange()
     {
         // Arrange
         var str = string.Empty;
         var until = "Hello";
 
-        // Act
-        var result = str.Until(until);
-
-        // Assert
-        Assert.Equal(string.Empty, result);
+        // Act & Assert
+        Assert.Throws<ArgumentException>(() => str.Until(until));
     }
 
     [Fact]
@@ -28,11 +25,8 @@ public class UntilTests
         var str = "Hello";
         var until = string.Empty;
 
-        // Act
-        var result = str.Until(until);
-
-        // Assert
-        Assert.Equal(str, result);
+        // Act & Assert
+        Assert.Throws<ArgumentException>(() => str.Until(until));
     }
 
     [Fact]

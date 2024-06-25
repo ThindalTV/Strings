@@ -12,6 +12,9 @@ public static class UntilExtensions
     /// <returns>The substring until the first occurrence of the delimiter, or the original string if the delimiter is not found.</returns>
     public static string Until(this string str, string until)
     {
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentException.ThrowIfNullOrEmpty(until, nameof(until));
+
         if (string.IsNullOrEmpty(until))
             return str;
 
@@ -32,6 +35,10 @@ public static class UntilExtensions
     public static string Until(string str, int startIndex, string until)
     {
         // TODO: Needs tests
+
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
+
         if (string.IsNullOrEmpty(until))
             return str;
 
@@ -51,6 +58,9 @@ public static class UntilExtensions
     public static string Until(this string str, char until)
     {
         // TODO: Needs tests
+
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+
         var index = str.IndexOf(until);
         if (index == -1)
             return str;
@@ -68,6 +78,9 @@ public static class UntilExtensions
     public static string Until(this string str, char until, int startIndex)
     {
         // TODO: Needs tests
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
+
         var index = str.IndexOf(until, startIndex);
         if (index == -1)
             return str;
@@ -86,6 +99,10 @@ public static class UntilExtensions
     public static string Until(this string str, char until, int startIndex, int count)
     {
         // TODO: Needs tests
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(count, 0, nameof(count));
+
         var index = str.IndexOf(until, startIndex, count);
         if (index == -1)
             return str;
@@ -103,6 +120,8 @@ public static class UntilExtensions
     public static string Until(this string str, char until, StringComparison comparisonType)
     {
         // TODO: Needs tests
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+
         var index = str.IndexOf(until, comparisonType);
         if (index == -1)
             return str;
@@ -119,6 +138,7 @@ public static class UntilExtensions
     /// <returns>The substring until the first occurrence of the delimiter, or the original string if the delimiter is not found.</returns>
     public static string Until(this string str, string until, StringComparison comparisonType)
     {
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
         if (string.IsNullOrEmpty(until))
             return str;
 
@@ -140,6 +160,10 @@ public static class UntilExtensions
     /// <returns>The substring until the first occurrence of the delimiter, or the original string if the delimiter is not found.</returns>
     public static string Until(this string str, string until, int startIndex, int count, StringComparison comparisonType)
     {
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(count, 0, nameof(count));
+
         if (string.IsNullOrEmpty(until))
             return str;
 
@@ -160,6 +184,10 @@ public static class UntilExtensions
     /// <returns>The substring until the first occurrence of the delimiter, or the original string if the delimiter is not found.</returns>
     public static string Until(this string str, string until, int startIndex, int count)
     {
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(count, 0, nameof(count));
+
         if (string.IsNullOrEmpty(until))
             return str;
 
@@ -180,6 +208,9 @@ public static class UntilExtensions
     /// <returns>The substring until the first occurrence of the delimiter, or the original string if the delimiter is not found.</returns>
     public static string Until(this string str, string until, int startIndex, StringComparison comparisonType)
     {
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThan(startIndex, 0, nameof(startIndex));
+
         if (string.IsNullOrEmpty(until))
             return str;
 

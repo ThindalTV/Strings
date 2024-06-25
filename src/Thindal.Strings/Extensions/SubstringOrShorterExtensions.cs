@@ -9,6 +9,9 @@ public static class SubstringOrShorterExtensions
     /// <returns>A string the length of <paramref name="length"/> or shorter.</returns>
     public static string SubstringOrShorter(this string str, int length)
     {
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(length, 0, nameof(length));
+
         if (str.Length <= length)
             return str;
         
@@ -23,6 +26,10 @@ public static class SubstringOrShorterExtensions
     /// <returns>A string the length of <paramref name="length"/> or shorter, starting at <paramref name="startIndex"/></returns>
     public static string SubstringOrShorter(this string str, int startIndex, int length)
     {
+        ArgumentException.ThrowIfNullOrEmpty(str, nameof(str));
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(startIndex, 0, nameof(startIndex));
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(length, 0, nameof(length));
+
         if (str.Length <= startIndex)
             return string.Empty;
 
