@@ -8,7 +8,7 @@ namespace Thindal.Strings.Tests.ExtensionTests;
 public class UntilTests
 {
     [Fact]
-    public async Task Until_WhenStringIsEmpty_ShouldThrowOutOfRange()
+    public void Until_WhenStringIsEmpty_ShouldThrowArgumentException()
     {
         // Arrange
         var str = string.Empty;
@@ -19,7 +19,7 @@ public class UntilTests
     }
 
     [Fact]
-    public void Until_WhenUntilIsEmpty_ShouldReturnString()
+    public void Until_WhenUntilIsEmpty_ShouldThrowArgumentException()
     {
         // Arrange
         var str = "Hello";
