@@ -19,7 +19,7 @@ Contains methods such as SubstringOrShorter and Until, making simple code shorte
     <IncludeSymbols>False</IncludeSymbols>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>$(VersionPrefix) 1.0.2</Version>
+    <Version>$(VersionPrefix) 1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
